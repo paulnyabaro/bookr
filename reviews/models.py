@@ -29,3 +29,15 @@ class Contributor(models.Model):
 
     def __str__(self):
         return self.first_name
+    
+
+# The intermediary table for book and contributor many to many relationship
+class BookContributor(models.Model):
+    class ContributionRole(models.TextChoices):
+        AUTHOR = 'AUTHOR', 'Author'
+        CO_AUTHOR = 'CO_AUTHOR', 'Co-Author'
+        EDITOR = 'EDITOR', 'Editor'
+
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    contributor = models.ForeignKey(Contributor, on_delete=models.CASCADE)
+    role = models.CharField(verbose_name='The role this contributor had in the book.', choices=ContributionRole.choices, max_length=20)
