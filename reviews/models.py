@@ -15,6 +15,7 @@ class Book(models.Model):
     publication_date = models.DateField(verbose_name='Date the book was published')
     isbn = models.CharField(max_length=20, verbose_name='ISBN number of the book')
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+    contributor = models.ManyToManyField('Contributor', through='Book contributor')
 
     def __str__(self):
         return self.title
