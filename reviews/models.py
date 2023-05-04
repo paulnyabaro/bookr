@@ -52,5 +52,5 @@ class Review(models.Model):
     creator = models.ForeignKey(auth.get_user_model(), on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, help_text='The book that this review is for')
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.content[:50]
