@@ -53,4 +53,4 @@ class Review(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE, help_text='The book that this review is for')
 
     def __str__(self):
-        return self.content[:50]
+        return self.content[:30]
