@@ -21,7 +21,7 @@ def book_list(request):
         else:
             book_rating = None
             number_of_reviews = 0
-            book_list.append({'book':book, 'book_rating': book_rating, 'number_of_reviews': number_of_reviews})
+        book_list.append({'book':book, 'book_rating': book_rating, 'number_of_reviews': number_of_reviews})
             
     context = {
         'book_list': book_list
