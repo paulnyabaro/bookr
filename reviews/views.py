@@ -26,4 +26,4 @@ def book_list(request):
         context = {
             'book_list': book_list
         }
-        return render(request, 'reviews/books_list.html', context)
+        return render(request, 'books_list.html', context)
