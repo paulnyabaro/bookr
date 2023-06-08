@@ -3,8 +3,10 @@
 {% block content %}
 <section class="py-4 py-lg-5">
     <div class="container">
-        <h1>Book list</h1>
+        <h1>{{ book.title }} detail</h1>
+        <p>By <span class="text-muted">{{ book.publisher }}</span>, Published on <span class="text-muted">{{ book.publication_date }}</span>, ISBN <span class="text-muted">isbn</span></p>
 
+        <h4>Book reviews</h4>
         <ul>
             {% for review in reviews %}
             <li>
