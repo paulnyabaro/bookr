@@ -10,13 +10,13 @@
             <li>
                 <span class="text-info">Review comment: </span> <span>{{ review.content }}</span>
                 <br>
-                <span class="text-info">Created on: </span><span>{{ item.book.publisher }}</span>
+                <span class="text-info">Created on: </span><span>{{ review.date_created|timesince }} ago</span>
                 <br>
-                <span class="text-info">Modified on: </span><span>{{ item.book.publication_date }}</span>
+                <span class="text-info">Modified on: </span><span>{{ review.date_edited|timesince }} ago</span>
                 <br>
-                <span class="text-info">Rating: </span><span>{{ item.book_rating }}</span>
+                <span class="text-info">Rating: </span><span>{{ review.rating }}</span>
                 <br>
-                <span class="text-info">Creator: </span><span>{{ item.number_of_reviews }}</span>
+                <span class="text-info">Creator: </span><span>{{ review.creator }}</span>
             </li>
           <br>
             {% endfor %}
