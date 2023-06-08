@@ -30,6 +30,7 @@ def book_list(request):
 
 def book_detail(request, book_id):
     book = get_object_or_404(Book, id=book_id)
-    context = {'book': book}
+    reviews = book.review_set.all()
+    context = {'book': book, 'reviews': reviews}
     return render(request, 'book_detail.html', context)
     
