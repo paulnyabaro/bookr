@@ -10,19 +10,13 @@
             <li>
                 <span class="text-info">Review comment: </span> <span>{{ item.book.title }}</span>
                 <br>
-                <span class="text-info">Publisher: </span><span>{{ item.book.publisher }}</span>
+                <span class="text-info">Created on: </span><span>{{ item.book.publisher }}</span>
                 <br>
-                <span class="text-info">Publication Date: </span><span>{{ item.book.publication_date }}</span>
+                <span class="text-info">Modified on: </span><span>{{ item.book.publication_date }}</span>
                 <br>
                 <span class="text-info">Rating: </span><span>{{ item.book_rating }}</span>
                 <br>
-                <span class="text-info">Number of reviews: </span><span>{{ item.number_of_reviews }}</span>
-                <br>
-                {% if item.book_rating is null %}
-                <span>Provide a rating and write the first review for this book.</span>
-                <br>
-                {% endif %}
-                <a href="" class="btn btn-primary mt-3 btn-sm">Review</a>
+                <span class="text-info">Creator: </span><span>{{ item.number_of_reviews }}</span>
             </li>
           <br>
             {% endfor %}
