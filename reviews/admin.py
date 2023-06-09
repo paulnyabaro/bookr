@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Publisher, Book, Contributor, Review, BookContributor
+from .models import Book, BookContributor, Contributor, Publisher, Review
 
 
 admin.site.register(Book)
